@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Our Memory Lane ❤️</title>
+
+<style>
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg,#ffe6f0,#ffd6e7);
+  text-align: center;
+  overflow-x: hidden;
+}
+
+h1 {
+  margin-top: 40px;
+  font-size: 42px;
+}
+
+.timeline {
+  width: 90%;
+  max-width: 700px;
+  margin: 40px auto;
+}
+
+.memory {
+  background: white;
+  margin: 20px 0;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(255,0,100,0.1);
+  transition: 0.3s;
+}
+
+.memory:hover {
+  transform: scale(1.03);
+}
+
+.memory img {
+  width: 100%;
+  border-radius: 10px;
+  margin-top: 10px;
+}
+
+button {
+  padding: 12px 25px;
+  font-size: 18px;
+  border-radius: 30px;
+  border: none;
+  cursor: pointer;
+  margin: 10px;
+}
+
+.yes {
+  background: #ff4d88;
+  color: white;
+}
+
+.no {
+  background: white;
+  color: #ff4d88;
+  border: 2px solid #ff4d88;
+  position: relative;
+}
+</style>
+</head>
+
+<body>
+
+<h1>Our Memory Lane 💕</h1>
+
+<div class="timeline">
+
+  <div class="memory">
+    <h3>May 9, 2023 – The Spark</h3>
+    <p>The day everything quietly began.</p>
+  </div>
+
+  <div class="memory">
+    <h3>May 15, 2023 – The First Heyyyy</h3>
+    <p>That message still makes me smile.</p>
+    <img src="photo1.jpg">
+  </div>
+
+  <div class="memory">
+    <h3>August 9, 2024 – Divine Quest</h3>
+    <p>One of our most special days.</p>
+    <img src="photo2.jpg">
+  </div>
+
+</div>
+
+<h2>Will you be mine forever? 💍</h2>
+
+<button class="yes" onclick="yesClicked()">Yes ❤️</button>
+<button class="no" id="noBtn" onmouseover="moveNo()">No 😜</button>
+
+<script>
+let noClicks = 0;
+
+function moveNo() {
+  const btn = document.getElementById("noBtn");
+  btn.style.position = "absolute";
+  btn.style.left = Math.random() * (window.innerWidth - 100) + "px";
+  btn.style.top = Math.random() * (window.innerHeight - 50) + "px";
+}
+
+function yesClicked() {
+  document.body.innerHTML = `
+    <div style="margin-top:100px">
+      <h1>She Said YESSSS ❤️💍</h1>
+      <h2>I Love You Forever</h2>
+    </div>
+  `;
+}
+</script>
+
+</body>
+</html>
